@@ -1,0 +1,22 @@
+/* this is a CSS comment */
+
+/* here, we change some of the default styles on our main document elements */
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+/* this targets everything and removes a weird and annoying default browser style */
+* {
+	box-sizing: border-box;
+}
+
+.webcam {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+	z-index: -1;
+}
