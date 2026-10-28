@@ -33,3 +33,7 @@ First idea for the interface.
 
 ![hill](./source/img/hill.jpeg)<br>
 [webcam](http://82.71.13.178:8080/mjpg/video.mjpg) that I like.
+
+<hr>
+
+Unfortunately, the site does not currently work with an HTTPS address because all the cameras I am using have non-secure addresses (HTTP). Consequently, GitHub Pages will not be able to display the webcams🥲.

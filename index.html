@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Poetic Archive</title>
-		<link rel="stylesheet" href="./style.css">
-	</head>
-	<body>
 
-		
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Poetic Archive</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
 
-		<img class="webcam" src="http://82.71.13.178:8080/mjpg/video.mjpg" alt="">
-		
+<body>
 
-		
 
-		<script src="./script.js"></script>
-	</body>
+	<img id="imageAleatoire" alt="Webcam aléatoire">
+
+
+	<button id="next">Next Webcam</button>
+
+
+	<div id="lecteur">
+		<iframe id="musique" scrolling="no" frameborder="no" allow="autoplay; encrypted-media"
+			src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2316951249%3Fsecret_token%3Ds-5gQnXtHwBBq&color=%23ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+		<p class="credit">
+			<a href="https://soundcloud.com/osmamia" target="_blank">KeyGen Muzik</a>
+			·
+			<a href="https://soundcloud.com/osmamia/sets/dk2pvryuyzqi/s-5gQnXtHwBBq" target="_blank">❦ ᴀ ᴍ ʙ ɪ ᴇ ɴ ᴛ ❦</a>
+		</p>
+	</div>
+
+
+	<script src="https://w.soundcloud.com/player/api.js"></script>
+	<script src="./script.js"></script>
+
+</body>
+
 </html>
