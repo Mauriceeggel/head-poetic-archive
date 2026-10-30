@@ -1,58 +1,192 @@
 /* this is a CSS comment */
 
 /* here, we change some of the default styles on our main document elements */
-html, body {
+html,
+body {
 	margin: 0;
 	padding: 0;
 }
 
-/* this targets everything and removes a weird and annoying default browser style */
-* {
-	box-sizing: border-box;
+@font-face {
+	font-family: BPdots;
+	src: url(./source/BPdots.woff);
 }
 
-
+* {
+	box-sizing: border-box;
+	cursor: url("./source/img/croix.svg") 16 16, crosshair;
+}
 
 
 #imageAleatoire {
-	position:fixed;
+	position: fixed;
 	top: 0;
-	left:0;
+	left: 0;
 	width: 100vw;
 	height: 100vh;
 	z-index: -1;
-	object-fit:cover;
+	object-fit: cover;
 }
 
 #next {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        z-index: 1;
+        padding: 0;
+        border: none;
+        background: none;
+}
+
+.oeil {
+        display: block;
+}
+
+
+#next.cligne .oeil {
+        animation: cligner 0.35s ease-in-out;
+}
+
+/* clignement animation */
+@keyframes cligner {
+        0%, 100% {
+                transform: scaleY(1);
+        }
+        50% {
+                transform: scaleY(0.05);
+        }
+}
+
+/* lecteur dans un rectangle noir au bord blanc, comme l'intro */
+#lecteur {
 	position: fixed;
-	top: 10px;
-	left: 50%;
-	transform: translate(-50%);
+	bottom: 50px;
+	left: 50px;
+	width: 280px;
+	padding: 10px;
+	background: black;
+	border: 2px solid white;
 	z-index: 1;
 }
 
-#lecteur {
-        position: fixed;
-        bottom: 10px;
-        left: 10px;
-        width: 300px;
-        z-index: 1;
-}
-
 #musique {
-        display: block;
-        width: 100%;
-        height: 166px;
+	display: block;
+	width: 100%;
+	height: 166px;
+	filter: invert(1) hue-rotate(180deg);
 }
 
 .credit {
-        margin: 4px 0 0;
-        font-size: 10px;
-        font-family: sans-serif;
+	margin: 8px 0 0;
+	font-size: 10px;
+	font-family: sans-serif;
 }
 
 .credit a {
-        color: #cccccc;
-        text-decoration: none;
+	color: #cccccc;
+	text-decoration: none;
+}
+
+/* intro par-dessus le site, le site derrière est flouté */
+#intro {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	transition: opacity 0.6s, visibility 0.6s;
+}
+
+#intro.ferme {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.intro-image {
+	height: 90vh;
+}
+
+/* même taille que la partie visible de l'image */
+.intro-boite {
+	display: flex;
+	flex-direction: column;
+	height: 70vh;
+	aspect-ratio: 3 / 4;
+	padding: 24px;
+	background: black;
+	border: 2px solid white;
+	color: white;
+	font-family: BPdots;
+}
+
+.intro-texte {
+	flex: 1;
+	overflow-y: auto;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.intro-texte p {
+	margin: 0 0 1em;
+}
+
+.intro-texte a {
+	color: blue;
+	text-decoration: underline;
+}
+
+.intro-texte a:hover {
+	color: yellow;
+}
+
+.intro-titre {
+	font-size: 20px;
+}
+
+#entrer {
+	margin: 16px 0;
+	padding: 8px;
+	background: black;
+	color: white;
+	border: 2px solid white;
+	font-family: inherit;
+	font-size: 18px;
+}
+
+#entrer:hover {
+	background: white;
+	color: black;
+}
+
+.intro-credit {
+	margin: 0;
+	font-size: 10px;
+}
+
+/* écran plus haut que large : l'image et le texte l'un sous l'autre */
+@media (max-aspect-ratio: 5/4) {
+	#intro {
+		flex-direction: column;
+		justify-content: flex-start;
+		overflow-y: auto;
+	}
+
+	.intro-image {
+		width: 90vw;
+		height: auto;
+	}
+
+	.intro-boite {
+		width: 90vw;
+		height: auto;
+		aspect-ratio: auto;
+		margin-bottom: 20px;
+	}
 }

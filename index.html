@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Poetic Archive</title>
+	<title>Sin.Poetic</title>
 	<link rel="stylesheet" href="./style.css">
 </head>
 
@@ -14,17 +14,38 @@
 	<img id="imageAleatoire" alt="Webcam aléatoire">
 
 
-	<button id="next">Next Webcam</button>
+	<button id="next" aria-label="Next webcam">
+		<svg class="oeil" viewBox="0 0 100 60" width="120" height="88">
+			<path d="M5 30 Q50 -10 95 30 Q50 70 5 30 Z" fill="white" stroke="blue" stroke-width="3" />
+			<circle cx="50" cy="30" r="14" fill="blue" />
+			<circle cx="50" cy="30" r="6" fill="black" />
+		</svg>
+	</button>
+
 
 
 	<div id="lecteur">
 		<iframe id="musique" scrolling="no" frameborder="no" allow="autoplay; encrypted-media"
-			src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2316951249%3Fsecret_token%3Ds-5gQnXtHwBBq&color=%23ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+			src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2316951249%3Fsecret_token%3Ds-5gQnXtHwBBq&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 		<p class="credit">
-			<a href="https://soundcloud.com/osmamia" target="_blank">KeyGen Muzik</a>
-			·
-			<a href="https://soundcloud.com/osmamia/sets/dk2pvryuyzqi/s-5gQnXtHwBBq" target="_blank">❦ ᴀ ᴍ ʙ ɪ ᴇ ɴ ᴛ ❦</a>
+			<a href="https://soundcloud.com/osmamia" target="_blank">KeyGen Muzik - ❦ ᴀ ᴍ ʙ ɪ ᴇ ɴ ᴛ ❦</a>
 		</p>
+	</div>
+
+
+	<div id="intro">
+		<img class="intro-image" src="./source/img/sin-poetic-03.png" alt="Sin.Poetic">
+		<div class="intro-boite">
+			<div class="intro-texte">
+				<p class="intro-titre">Welcome to Sin.Poetic!</p>
+				<p>This page brings together images and sounds to create atmospheres and evoke new meanings.</p>
+				<p>All videos and audio tracks have been personally selected by me. The videos consist of live feeds from unsecured security cameras listed on <a href="http://www.insecam.org/en/" target="_blank">Insecam</a>. The audio tracks are sourced from SoundCloud and compiled into a single <a href="https://soundcloud.com/osmamia/sets/dk2pvryuyzqi" target="_blank">playlist</a>.</p>
+				<p>It is important to note that <a href="http://www.insecam.org/en/" target="_blank">Insecam</a> is a website that indexes unsecured security cameras, whose owners are, in many cases, unaware that their feeds are publicly accessible. Although cameras capturing private properties are relatively uncommon, the individuals and locations shown are generally not notified that they are being filmed or that their footage may be viewed by others.</p>
+				<p>Sin.Poetic explores the relationship between images, sounds, and the meanings that emerge when they are brought together. However, the material used in these compositions raises important questions about surveillance, privacy, and the ethics of using images captured without the subjects' knowledge. These feeds are not merely visual material; they document real places and potentially real lives, exposed to an audience that was never necessarily intended to see them.</p>
+			</div>
+			<button id="entrer">Enter</button>
+			<p class="intro-credit">Website created by Maurice Eggel during the workshop &lt;3 FOREVER ONLINE, TOGETHER ONLINE &lt;3, led by Rifke Sadleir [26.10–30.10.26].</p>
+		</div>
 	</div>
 
 

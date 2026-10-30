@@ -1,4 +1,7 @@
-# Poetic Archive - Process
+# Sin.Poetic  - Process
+
+![sinpoetic-image](./source/img/sin-poetic-03.png)
+
 <hr>
 
 Here is a list of references used as a starting point for this project:
