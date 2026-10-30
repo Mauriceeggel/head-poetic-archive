@@ -39,4 +39,16 @@ First idea for the interface.
 
 <hr>
 
-Unfortunately, the site does not currently work with an HTTPS address because all the cameras I am using have non-secure addresses (HTTP). Consequently, GitHub Pages will not be able to display the webcams🥲.
+Unfortunately, the site does not currently work with an HTTPS address because all the cameras I am using have non-secure addresses (HTTP). Consequently, GitHub Pages will not be able to display the webcams🥲.<br>
+
+If you wish to use this website, you can do so via the "Server Live" extension in VS Code.
+
+<hr>
+
+![interface-intro](./source/img/screenshot-01.png)
+--> Upon entering the site, you are greeted by text and an image. To access the site, you must click the "enter" button — this will automatically start the music.
+
+<hr>
+
+![interface](./source/img/screenshot-02.png)
+--> Once on the site, there is only one possible interaction: clicking on the eye. When you click on it, the webcam feed and the music change.
