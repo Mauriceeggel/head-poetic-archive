@@ -2,7 +2,7 @@
 
 ![sinpoetic-image](./source/img/sin-poetic-03.png)
 
-**Unfortunately, the site does not currently work with an HTTPS address because all the cameras have non-secure addresses (HTTP). Consequently, GitHub Pages will not be able to display the webcams 🥲.**<br>
+**Unfortunately, the site does not currently work with an HTTPS address because all the cameras have non-secure addresses (HTTP). Consequently, [GitHub Pages](https://mauriceeggel.github.io/head-poetic-archive/) will not be able to display the webcams 🥲.**<br>
 
 **If you wish to use this website, you can download the repo and open it via the "Server Live" extension in VS Code.**
 
